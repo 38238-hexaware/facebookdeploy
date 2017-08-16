@@ -5,15 +5,16 @@ var fs=require('fs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/", function (req, res) {
-
+if (req.body.object === 'page') {
     if (req.body.result.action == "input.welcome") {
         if (req.body.result.resolvedQuery == "hi") {
             return res.json({
-                speech: "How are you?? Srini",
-                displayText: "How are you?? Srini",
+                speech: req.body.object,
+                displayText: req.body.object,
                 source: 'agent'
             });
         }
+    }
     }
 });
 
