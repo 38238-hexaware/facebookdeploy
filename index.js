@@ -4,11 +4,12 @@ var bodyParser=require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/", function (req, res) {
+   console.log(req.body.object);
     if (req.body.result.action == "input.welcome") {
         if (req.body.result.resolvedQuery == "hi") {
             return res.json({
-                speech: "How are you?? Srini",
-                displayText: "How are you?? Srini",
+                speech: req.body.object,
+                displayText: req.body.object,
                 source: 'agent'
             });
         }
