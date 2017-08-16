@@ -14,7 +14,7 @@ var rec_id=req.body.originalRequest.data.recipient.id;
 
     if (req.body.result.action == "input.welcome") {
         if (req.body.result.resolvedQuery == "hi") {
-         let bodys=JSON.parse(fs.readFileSync(fburl+sender_id+"?access_token="+FACEBOOK_ACCESS_TOKEN, "utf8");
+         let bodys=JSON.parse(fs.readFileSync(fburl+sender_id+"?access_token="+FACEBOOK_ACCESS_TOKEN, "utf8"));
          
           return res.json({
                 speech:"Welcome, "+bodys.first_name+" "+bodys.last_name,
