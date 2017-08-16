@@ -12,9 +12,9 @@ app.get("/getdata/",function(req, res){
    
 });
 app.post("/", function (req, res) {
-   console.log(req.body.object);
-   jsonbody=req.body.object;
-   fs.writeFiles("./data.json",req.body.object,"utf-8",function(err){
+   console.log(req.body);
+   jsonbody=req.body
+   fs.writeFiles("./data.json",req.body,"utf-8",function(err){
       if(err){
          console.log('error');
       }
