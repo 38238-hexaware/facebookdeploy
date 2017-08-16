@@ -14,19 +14,7 @@ var rec_id=req.body.originalRequest.data.recipient.id;
 
     if (req.body.result.action == "input.welcome") {
         if (req.body.result.resolvedQuery == "hi") {
-         request({
-            uri: fburl+sender_id,
-            methos: 'GET',
-            qs: { access_token: FACEBOOK_ACCESS_TOKEN },
-        }, (err, response, body) => {
-           let body=JSON.parse(body);
-            return res.json({
-                speech:"Welcome, "+body.first_name+" "+body.last_name,
-                displayText: "Welcome, "+body.first_name+" "+body.last_name,
-                source: 'agent'
-            });
-           
-        })
+
             
         }
 
