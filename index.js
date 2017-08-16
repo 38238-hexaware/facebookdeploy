@@ -19,8 +19,8 @@ var rec_id=req.body.originalRequest.data.recipient.id;
             methos: 'GET'
         }, (err, response, body) => {
           return res.json({
-                speech:"Welcome, "+bodys.first_name+" "+bodys.last_name,
-                displayText: "Welcome, "+bodys.first_name+" "+bodys.last_name,
+                speech:"Welcome, "+body.first_name+" "+body.last_name,
+                displayText: "Welcome, "+body.first_name+" "+body.last_name,
                 source: 'agent'
             });
         });
