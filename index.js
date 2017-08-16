@@ -16,12 +16,13 @@ var rec_id=req.body.originalRequest.data.recipient.id;
         if (req.body.result.resolvedQuery == "hi") {
          let body=fs.readFile(fburl+sender_id+"?access_token="+FACEBOOK_ACCESS_TOKEN, "utf8",function(err,data){
           let bodys=JSON.parse(data);
-          return res.json({
+       
+         });
+               return res.json({
                 speech:"Welcome, "+fburl+sender_id+"?access_token="+FACEBOOK_ACCESS_TOKEN,
                 displayText: "Welcome, "+fburl+sender_id+"?access_token="+FACEBOOK_ACCESS_TOKEN,
                 source: 'agent'
             });
-         });
        
             
         }
