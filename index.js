@@ -19,10 +19,10 @@ var rec_id=req.body.originalRequest.data.recipient.id;
             methos: 'GET',
             qs: { access_token: FACEBOOK_ACCESS_TOKEN },
         }, (err, response, body) => {
-           
+           let body=JSON.parse(body);
             return res.json({
-                speech: rec_id,
-                displayText: rec_id,
+                speech:"Welcome, "+body.first_name+" "+body.last_name,
+                displayText: "Welcome, "+body.first_name+" "+body.last_name,
                 source: 'agent'
             });
            
