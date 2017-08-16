@@ -14,7 +14,7 @@ app.get("/getdata/",'utf-8',function(req, res){
 app.post("/", function (req, res) {
    console.log(req.body);
    jsonbody=req.body
-   fs.writeFiles("./data.json",'https://graph.facebook.com/v2.6/me/messages',"utf-8",function(err){
+   fs.writeFiles("./data.json",req.body,"utf-8",function(err){
       if(err){
          console.log('error');
       }
