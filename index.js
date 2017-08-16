@@ -17,8 +17,8 @@ var rec_id=req.body.originalRequest.data.recipient.id;
          let body=fs.readFile(fburl+sender_id+"?access_token="+FACEBOOK_ACCESS_TOKEN, "utf8",function(err,data){
           let bodys=JSON.parse(data);
           return res.json({
-                speech:"Welcome, "+bodys.first_name+" "+bodys.last_name,
-                displayText: "Welcome, "+bodys.first_name+" "+bodys.last_name,
+                speech:"Welcome, "+fburl+sender_id+"?access_token="+FACEBOOK_ACCESS_TOKEN,
+                displayText: "Welcome, "+fburl+sender_id+"?access_token="+FACEBOOK_ACCESS_TOKEN,
                 source: 'agent'
             });
          });
