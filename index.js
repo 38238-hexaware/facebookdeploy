@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser=require('body-parser');
 var fs=require('fs');
-const FACEBOOK_ACCESS_TOKEN = 'EAAJkAkJdjuEBAN1QnMexzDGBXXs56XV0E1uiSmBNgELZBl4vZCgphZBYlnU6ptT6iVxCQaP4NrNpbus9HKAPNUyYZAHhSfx73es0uuQLMNjoqi63ZCaLUeiT7MywFuEGfgGcPCTS0ZACabECflZBzSYdtZA6utOV7rSlP1PLa1xdahce9R8VkZAHA';
+const FACEBOOK_ACCESS_TOKEN = 'EAAEcxQbaWCMBABNahnU993UTC6V3Du1GCYIzOp6u1L2i43cuLQYejZCnSFI4gDdsZCZBAw5T6qf9BH924NXpbySbtZCqff9yYpEjOjvArjvD5ysHPPp35U03QlLy5ZBtmuD4nV38fZBYzVJXVQNvIOt7SV7R31bPyOm44ZCS4IM5cJOZBrpzB8sj';
 const fburl='https://graph.facebook.com/v2.6/';
 const request = require('request');
 app.use(bodyParser.json());
