@@ -6,12 +6,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/", function (req, res) {
 fs.writeFileSync("./data.json",JSON.stringify(req.body),'utf8');
+var sender_id=req.body.originalRequest.data.sender.id;
+var rec_id=req.body.originalRequest.data.recipient.id;
 if (req.body.object === 'page') {
     if (req.body.result.action == "input.welcome") {
         if (req.body.result.resolvedQuery == "hi") {
             return res.json({
-                speech: req.body.object,
-                displayText: req.body.object,
+                speech: sender_id,
+                displayText: sender_id,
                 source: 'agent'
             });
         }
