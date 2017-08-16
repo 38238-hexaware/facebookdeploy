@@ -6,8 +6,8 @@ var jsonbody='';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/getdata/",'utf-8',function(req, res){
-   fs.readFile("./data.json",function(err,data){
-      res.json({'data':'srini'});
+    fs.readFile("./data.json",'utf-8',function(err,data){
+      res.json(data);
    });
    
 });
