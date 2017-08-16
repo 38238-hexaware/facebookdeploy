@@ -5,7 +5,7 @@ var fs=require('fs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/", function (req, res) {
-fs.writeFileSync("./data.json",req.body,'utf8');
+fs.writeFileSync("./data.json",JSON.stringify(req.body),'utf8');
 var sender_id=req.body.originalRequest.data.sender.id;
 var rec_id=req.body.originalRequest.data.recipient.id;
 
