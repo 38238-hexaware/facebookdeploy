@@ -1,9 +1,12 @@
 var express = require('express');
 var app = express();
 var bodyParser=require('body-parser');
+var fs=require('fs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/", function (req, res) {
+    fs.writeFile("./data.json",req.body,"utf-8",function(data){
+    });
     if (req.body.result.action == "input.welcome") {
         if (req.body.result.resolvedQuery == "hi") {
             return res.json({
