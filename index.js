@@ -12,8 +12,8 @@ var rec_id=req.body.originalRequest.data.recipient.id;
     if (req.body.result.action == "input.welcome") {
         if (req.body.result.resolvedQuery == "hi") {
             return res.json({
-                speech: sender_id,
-                displayText: sender_id,
+                speech: rec_id,
+                displayText: rec_id,
                 source: 'agent'
             });
         }
