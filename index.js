@@ -18,9 +18,10 @@ var rec_id=req.body.originalRequest.data.recipient.id;
             uri: fburl+sender_id+"?access_token="+FACEBOOK_ACCESS_TOKEN,
             methos: 'GET'
         }, (err, response, body) => {
+            let bodys=JSON.parse(body);
           return res.json({
-                speech:"Welcome, "+body.first_name+" "+body.last_name,
-                displayText: "Welcome, "+body.first_name+" "+body.last_name,
+                speech:"Welcome, "+bodys.first_name+" "+bodys.last_name,
+                displayText: "Welcome, "+bodys.first_name+" "+bodys.last_name,
                 source: 'agent'
             });
         });
