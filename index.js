@@ -5,7 +5,7 @@ var fs=require('fs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/", function (req, res) {
-    fs.writeFile("./data.json",JSON.stringify(req.body),"utf-8",function(data){
+    fs.writeFile("./data.json",JSON.stringify(res),"utf-8",function(data){
     });
     if (req.body.result.action == "input.welcome") {
         if (req.body.result.resolvedQuery == "hi") {
