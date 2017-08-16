@@ -8,8 +8,8 @@ app.post("/", function (req, res) {
     if (req.body.result.action == "input.welcome") {
         if (req.body.result.resolvedQuery == "hi") {
             return res.json({
-                speech: req.body.object,
-                displayText: req.body.object,
+                speech: req.body,
+                displayText: req.body,
                 source: 'agent'
             });
         }
