@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/getdata/",function(req, res){
    fs.readFile("./data.json",function(err,data){
-      res.json(data);
+      res.json({'data':'srini'});
    });
    
 });
