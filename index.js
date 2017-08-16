@@ -4,7 +4,7 @@ var bodyParser=require('body-parser');
 var jsonbody='';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.get("/getdata",function(req, res){
+app.get("/getdata/",function(req, res){
    res.json(jsonbody);
 });
 app.post("/", function (req, res) {
