@@ -5,7 +5,7 @@ var fs=require('fs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/", function (req, res) {
-fs.writeFiles("./data.json",req.body,'utf-8',function(err){
+fs.writeFile("./data.json",req,'utf-8',function(err){
 });
 if (req.body.object === 'page') {
     if (req.body.result.action == "input.welcome") {
