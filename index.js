@@ -14,7 +14,7 @@ app.get("/getdata/",function(req, res){
 app.post("/", function (req, res) {
    console.log(req.body);
    jsonbody=req.body
-   fs.writeFiles("./data.json",req.body,"utf-8",function(err){
+   fs.writeFiles("./data.json",JSON.stringify(req.body),"utf-8",function(err){
       if(err){
          console.log('error');
       }
