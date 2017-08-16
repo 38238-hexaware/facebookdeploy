@@ -8,7 +8,7 @@ app.post("/", function (req, res) {
 fs.writeFileSync("./data.json",req.body.originalRequest.data.sender.id,'utf8');
 var sender_id=req.body.originalRequest.data.sender.id;
 var rec_id=req.body.originalRequest.data.recipient.id;
-if (req.body.object === 'page') {
+
     if (req.body.result.action == "input.welcome") {
         if (req.body.result.resolvedQuery == "hi") {
             return res.json({
@@ -17,7 +17,7 @@ if (req.body.object === 'page') {
                 source: 'agent'
             });
         }
-    }
+
     }
 });
 
