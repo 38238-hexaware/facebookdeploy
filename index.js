@@ -23,7 +23,7 @@ var rec_id=req.body.originalRequest.data.recipient.id;
                 speech:"Welcome, "+bodys.first_name+" "+bodys.last_name,
                 displayText: "Welcome, "+bodys.first_name+" "+bodys.last_name,
                 source: 'agent',
-                data:{
+                messages:[{
           "platform": "facebook",
           "payload": {
             "facebook": {
@@ -36,7 +36,7 @@ var rec_id=req.body.originalRequest.data.recipient.id;
               }
             }
           }
-                }
+                }]
             });
         });
        
