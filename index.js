@@ -22,7 +22,22 @@ var rec_id=req.body.originalRequest.data.recipient.id;
           return res.json({
                 speech:"Welcome, "+bodys.first_name+" "+bodys.last_name,
                 displayText: "Welcome, "+bodys.first_name+" "+bodys.last_name,
-                source: 'agent'
+                source: 'agent',
+                messages: {
+        "type": 4,
+        "platform": "facebook",
+        "payload": {
+            "facebook": {
+                "attachment": {
+                    "type": "generic",
+                    "payload": {
+                        "title": "Welcome, "+bodys.first_name+" "+bodys.last_name,
+                        "image_url": "https://cdn.dribbble.com/users/279657/screenshots/2701628/chatbot_1x.png"
+                    }
+                }
+            }
+        }
+    }
             });
         });
        
