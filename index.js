@@ -29,8 +29,10 @@ var rec_id=req.body.originalRequest.data.recipient.id;
           "payload": {
             "facebook": {
               "attachment": {
-                "type": "",
-                "payload": {}
+                "type": "image",
+                "payload": {
+                "url":""
+                }
               }
             }
           }]
