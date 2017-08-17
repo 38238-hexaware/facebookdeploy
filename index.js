@@ -31,7 +31,7 @@ var rec_id=req.body.originalRequest.data.recipient.id;
               "attachment": {
                 "type": "image",
                 "payload": {
-                "url":""
+                "url":"https://cdn.dribbble.com/users/279657/screenshots/2701628/chatbot_1x.png"
                 }
               }
             }
