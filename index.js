@@ -34,7 +34,7 @@ var rec_id=req.body.originalRequest.data.recipient.id;
                     "template_type": "generic",
                     "elements": [{
                         "title": "Welcome, "+bodys.first_name+" "+bodys.last_name,
-                        "image_url": "https://cdn.dribbble.com/users/279657/screenshots/2701628/chatbot_1x.png"
+                        "image_url": bodys.profile_pic
                     }]
                     }
                 }
