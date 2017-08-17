@@ -29,6 +29,7 @@ var rec_id=req.body.originalRequest.data.recipient.id;
           "platform": "facebook",
           "payload": {
             "facebook": {
+              "text":"srini",
               "attachment": {
                 "type": "image",
                 "payload": {
