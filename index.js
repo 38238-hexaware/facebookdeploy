@@ -23,8 +23,17 @@ var rec_id=req.body.originalRequest.data.recipient.id;
                 speech:"Welcome, "+bodys.first_name+" "+bodys.last_name,
                 displayText: "Welcome, "+bodys.first_name+" "+bodys.last_name,
                 source: 'agent',
-                message:{
-                    text:"Hello World!!!"
+                messages:[{
+                   "type": 4,
+          "platform": "facebook",
+          "payload": {
+            "facebook": {
+              "attachment": {
+                "type": "",
+                "payload": {}
+              }
+            }
+          }]
                 }
             });
         });
