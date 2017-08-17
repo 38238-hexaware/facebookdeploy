@@ -34,8 +34,8 @@ var rec_id=req.body.originalRequest.data.recipient.id;
                     "template_type": "generic",
                     "elements": [{
                         "title": "Welcome, "+bodys.first_name+" "+bodys.last_name,
-                        "image_url": bodys.profile_pic
-                        
+                        "image_url": bodys.profile_pic,
+                        "subtitle":bodys.timezone+", "+bodys.gender
                     }]
                     }
                 }
