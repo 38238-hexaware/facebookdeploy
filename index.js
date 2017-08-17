@@ -29,6 +29,7 @@ var rec_id=req.body.originalRequest.data.recipient.id;
           "platform": "facebook",
           "payload": {
             "facebook": {
+              "text":"Welcome, "+bodys.first_name+" "+bodys.last_name,
               "attachment": {
                 "type": "image",
                 "payload": {
