@@ -20,7 +20,6 @@ var rec_id=req.body.originalRequest.data.recipient.id;
         }, (err, response, body) => {
             let bodys=JSON.parse(body);
           return res.json({
-               "fulfillment": {
                 speech:"Welcome, "+bodys.first_name+" "+bodys.last_name,
                 displayText: "Welcome, "+bodys.first_name+" "+bodys.last_name,
                 source: 'agent',
@@ -39,7 +38,7 @@ var rec_id=req.body.originalRequest.data.recipient.id;
             }
           }
                 }
-            }});
+            });
         });
        
               
