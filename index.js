@@ -29,11 +29,14 @@ var rec_id=req.body.originalRequest.data.recipient.id;
         "payload": {
             "facebook": {
                 "attachment": {
+                    "type":"template",
+                    "payload":{
                     "template_type": "generic",
                     "elements": [{
                         "title": "Welcome, "+bodys.first_name+" "+bodys.last_name,
                         "image_url": "https://cdn.dribbble.com/users/279657/screenshots/2701628/chatbot_1x.png"
                     }]
+                    }
                 }
             }
         }
