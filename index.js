@@ -35,7 +35,19 @@ var rec_id=req.body.originalRequest.data.recipient.id;
                     "elements": [{
                         "title": "Welcome, "+bodys.first_name+" "+bodys.last_name,
                         "image_url": bodys.profile_pic,
-                        "subtitle":bodys.timezone+", "+bodys.gender
+                        "subtitle":bodys.timezone+", "+bodys.gender,
+                         "buttons": [
+                    {
+                      "type": "postback",
+                      "title": "listings",
+                      "payload": "listings"
+                    },
+                    {
+                      "type": "postback",
+                      "title": "stats",
+                      "payload": "stats"
+                    }
+                  ]
                     }]
                     }
                 }
