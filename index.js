@@ -24,6 +24,10 @@ var rec_id=req.body.originalRequest.data.recipient.id;
                 displayText: "Welcome, "+bodys.first_name+" "+bodys.last_name,
                 source: 'agent',
                 messages:[{
+                "type": 4,   
+                "platform": "facebook",
+                "text": "Welcome, "+bodys.first_name+" "+bodys.last_name
+                },{
                    "type": 4,   
           "platform": "facebook",
           "payload": {
